@@ -1,0 +1,65 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Muli', Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    line-height: 1.5;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    background: linear-gradient(purple, rgb(128, 0, 128,0.5));
+}
+
+.search {
+    height: 5rem;
+    position: relative;    
+}
+
+.search .input{
+    background-color: #fff;
+    height: 5rem;
+    width: 5rem;
+    border: 0;
+    border-radius: 25px;
+    font-size: 1.8rem;
+    padding: 2rem;
+    outline: 0;
+    transition: width 0.5s ease ;
+}
+
+.button{
+    position: absolute;
+    height: 5rem;
+    width: 5rem;
+    font-size: 2rem;
+    cursor: pointer;
+    border-radius: 25px;
+    outline: 0;
+    border: 0;
+    top: 0;
+    left: 0;
+    transition: 0.5s ease;
+}
+
+.search.active .input{
+    width: 20rem;
+}
+
+.search.active .button {
+    transform: translateX(150px);
+}
+
+::placeholder{
+    padding: 0.1rem;
+}
